@@ -1,9 +1,12 @@
 package cn.butterfly.client.config;
 
 import cn.butterfly.client.filter.HttpInterceptor;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
@@ -23,6 +26,17 @@ public class WebConfig extends WebMvcConfigurationSupport {
 
 	@Resource
 	private HttpInterceptor httpInterceptor;
+
+//	@Bean
+//	public RestTemplate restTemplate() {
+//		RestTemplate restTemplate = new RestTemplate();
+//		SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
+//		factory.setBufferRequestBody(false);
+//		factory.setReadTimeout(60000);
+//		factory.setConnectTimeout(60000);
+//		restTemplate.setRequestFactory(factory);
+//		return restTemplate;
+//	}
 
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {

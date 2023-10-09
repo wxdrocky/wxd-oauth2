@@ -3,8 +3,10 @@ server:
 
 oauth:
   github:
-    clientId: 8aed0bc8316548e9d26d
-    clientSecret: fdd0e7af5052164e459098703005c5db25f857a8
+#    clientId: 8aed0bc8316548e9d26d
+#    clientSecret: fdd0e7af5052164e459098703005c5db25f857a8
+    clientId: a0998dbbae49969e2b2a
+    clientSecret: 4277c0648f21a4fda130923d6ae0ddb6062b455f
     frontRedirectUrl: http://localhost/redirect
   oauth2:
     clientId: butterfly
@@ -14,3 +16,12 @@ oauth:
 retrofit:
   global-connect-timeout-ms: 20000
   global-read-timeout-ms: 10000
+
+ar:
+  http:
+    max-connections: 3000
+    default-per-route: 1000
+    read-timeout: 120000
+    connect-timeout: 120000
+    connection-request-timeout: 120000
+    connection-keep-alive-time: 1000
